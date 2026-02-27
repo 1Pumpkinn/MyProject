@@ -8,21 +8,27 @@ public class Main {
     public static void main(String[] args) {
 
         String[] array = new String[]{"Test1", "Test2", "Test3"};
-        System.out.println(array[0]);
 
         array[0] = "New Value!";
-        System.out.println(array[0]);
 
-        List<String> list = new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("Test1");
         list.add("Test2");
-        System.out.println(list.get(1));
 
         HashMap<String, String> map = new HashMap<>();
-        map.put("Banana", "Test");
-        System.out.println(map.get("Banana"));
+        map.put("banana", "Test");
+        map.put("meow", "Kitten");
 
 
+        for(String string : list) {
+            System.out.println(string);
+        }
 
+        int number = 0;
+        while(number < 11) {
+            System.out.println(number);
+            number++;
+
+        }
     }
 }
