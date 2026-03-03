@@ -1,5 +1,12 @@
 package net.saturn;
 
+import net.saturn.animals.Animal;
+import net.saturn.animals.Cat;
+import net.saturn.animals.Dog;
+import net.saturn.vehicles.Car;
+import net.saturn.vehicles.Motorbike;
+import net.saturn.vehicles.Vehicle;
+
 import java.util.*;
 import java.util.List;
 
@@ -7,28 +14,43 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String[] array = new String[]{"Test1", "Test2", "Test3"};
+        // Inheritance - Vehicles, Animals,
+        // Extends from the implementation of Vehicle
 
-        array[0] = "New Value!";
+        List<Vehicle> vehicleList = new ArrayList<>();
+        vehicleList.add(new Car());
+        vehicleList.add(new Motorbike());
 
-        ArrayList<String> list = new ArrayList<>();
-        list.add("Test1");
-        list.add("Test2");
+        vehicleList.get(0).getWheels();
+        vehicleList.get(0).getColor();
 
-        HashMap<String, String> map = new HashMap<>();
-        map.put("banana", "Test");
-        map.put("meow", "Kitten");
+        vehicleList.get(1).getWheels();
+        vehicleList.get(1).getColor();
 
-
-        for(String string : list) {
-            System.out.println(string);
+        for  (Vehicle vehicle : vehicleList) {
+            vehicle.activateBrakes();
         }
 
-        int number = 0;
-        while(number < 11) {
-            System.out.println(number);
-            number++;
+        List<Animal> animalList = new ArrayList<>();
+        animalList.add(new Cat());
+        animalList.add(new Dog());
 
-        }
+        animalList.get(0).getName();
+
+        System.out.println("--- Cat ---");
+
+        System.out.println(animalList.get(0).getName());
+        System.out.println(animalList.get(0).getAge());
+        System.out.println(animalList.get(0).getLegs());
+
+        System.out.println("--- Dog ---");
+
+        System.out.println(animalList.get(1).getName());
+        System.out.println(animalList.get(1).getAge());
+        System.out.println(animalList.get(1).getLegs());
+
+
+
+
     }
 }
