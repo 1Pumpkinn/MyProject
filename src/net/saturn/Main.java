@@ -1,27 +1,23 @@
 package net.saturn;
 
 
+import java.util.Calendar;
+
 public class Main {
 
     public static void main(String[] args) {
-        // Switch statements are basically a way to easily format a load of if else's
-        // break is going to jump out of the current code block and execute any other code below
-        // you can add a break to a for loop, while loop, or wherever and that will jump out of the loop and continue the code.
-        // return actually stops the code execution as a whole
 
-        String word = "banana";
+        Calendar cal = Calendar.getInstance();
+        System.out.println(cal.get(Calendar.DAY_OF_MONTH));
 
-        switch (word) {
-            case "banana": System.out.println("You found it!"); return;
+       // cal.add(Calendar.DAY_OF_YEAR, 1); // to subtract amount: -1
 
-            case "apple": System.out.println("This is not a banana"); break;
-            case "pear": System.out.println("This is not a banana"); break;
-            case "kiwi": System.out.println("This is not a banana"); break;
-            default: System.out.println("No Match was found!"); break;
-            // if user puts in something that we don't account for
-        }
+        System.out.println(cal.get(Calendar.DAY_OF_MONTH) + "/" +
+                cal.get(Calendar.DAY_OF_MONTH) + "/" + cal.get(Calendar.YEAR));
 
-        System.out.println("Hello you broke out the code block");
+        System.out.println(cal.get(Calendar.HOUR_OF_DAY));
+        System.out.println(cal.get(Calendar.HOUR) + ":" + cal.get(Calendar.MINUTE));
+
 
     }
 }
