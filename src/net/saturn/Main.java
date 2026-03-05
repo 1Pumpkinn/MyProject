@@ -1,23 +1,30 @@
 package net.saturn;
 
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("Meow");
+        list.add("Bark");
+        list.add("Rawr");
+        list.add("Croak");
+        list.add("Quack");
 
-        Calendar cal = Calendar.getInstance();
-        System.out.println(cal.get(Calendar.DAY_OF_MONTH));
+        Random random = new Random();
+        for (int i = 0; i < 20; i++) {
+            System.out.println(random.nextInt(10)); // 0 -> 9
+        }
 
-       // cal.add(Calendar.DAY_OF_YEAR, 1); // to subtract amount: -1
+        for (int i = 0; i < 10; i++) {
 
-        System.out.println(cal.get(Calendar.DAY_OF_MONTH) + "/" +
-                cal.get(Calendar.DAY_OF_MONTH) + "/" + cal.get(Calendar.YEAR));
-
-        System.out.println(cal.get(Calendar.HOUR_OF_DAY));
-        System.out.println(cal.get(Calendar.HOUR) + ":" + cal.get(Calendar.MINUTE));
-
-
+            Random listRandom = new Random();
+            System.out.println(list.get(listRandom.nextInt(list.size())));
+        }
     }
 }
